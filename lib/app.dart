@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
+        return MaterialApp( 
           debugShowCheckedModeBanner: false,
           title: 'Appointment App',
-          //  initialRoute: Routes.onBoardingRoute,
+           initialRoute: Routes.onBoardingRoute,
           onGenerateRoute: AppRoute.onGeneratorRoute,
           theme: ThemeData(
+            useMaterial3: true,
             scaffoldBackgroundColor: Colors.white,
             primaryColor: ColorManager.primary,
           ),
