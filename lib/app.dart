@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Appointment App',
-          //  initialRoute: Routes.onBoardingRoute,
+         // initialRoute: Routes.onBoardingRoute,
           onGenerateRoute: AppRoute.onGeneratorRoute,
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.white,
