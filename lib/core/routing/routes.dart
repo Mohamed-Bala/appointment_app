@@ -1,3 +1,4 @@
+import 'package:appointment_app/features/login/login_view.dart';
 import 'package:appointment_app/features/onboarding/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class AppRoute {
   static Route<dynamic> onGeneratorRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.loginRoute:
-        return MaterialPageRoute(builder: (_) => Container());
+        return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
 

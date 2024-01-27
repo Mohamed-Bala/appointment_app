@@ -21,7 +21,7 @@ class StylesManager {
   );
   static TextStyle font16White = TextStyle(
     fontSize: 16.sp,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     color: Colors.white,
   );
 }
