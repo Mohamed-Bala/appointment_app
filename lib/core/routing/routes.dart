@@ -1,19 +1,31 @@
-import 'package:appointment_app/features/login/login_view.dart';
+import 'package:appointment_app/features/home/ui/view/home_view.dart';
+import 'package:appointment_app/features/login/logic/cubit/login_cubit.dart';
+import 'package:appointment_app/features/login/ui/view/login_view.dart';
 import 'package:appointment_app/features/onboarding/onboarding_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../di/di.dart';
 import '../resources/strings_manager.dart';
 
 class Routes {
   static const String onBoardingRoute = "/onBoarding";
   static const String loginRoute = "/login";
+  static const String homeRoute = "/home";
 }
 
 class AppRoute {
   static Route<dynamic> onGeneratorRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.loginRoute:
-        return MaterialPageRoute(builder: (_) => const LoginView());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => di<LoginCubit>() ,
+            child: const LoginView(),
+          ),
+        );
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
 

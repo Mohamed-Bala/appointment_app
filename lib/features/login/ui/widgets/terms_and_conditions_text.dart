@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/resources/styles_manager.dart';
+import '../../../../core/resources/styles_manager.dart';
 
 class TermsAndConditionsText extends StatelessWidget {
   const TermsAndConditionsText({super.key});
@@ -17,7 +17,7 @@ class TermsAndConditionsText extends StatelessWidget {
           ),
           TextSpan(
             text: ' Terms & Conditions',
-            style: StylesManager.font13Grey,
+            style: StylesManager.font14Grey,
           ),
           TextSpan(
             text: ' and',
@@ -25,7 +25,7 @@ class TermsAndConditionsText extends StatelessWidget {
           ),
           TextSpan(
             text: ' Privacy Policy',
-            style: StylesManager.font13Grey,
+            style: StylesManager.font14Grey,
           ),
         ],
       ),

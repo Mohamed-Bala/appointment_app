@@ -19,6 +19,11 @@ class StylesManager {
     fontWeight: FontWeight.normal,
     color: ColorManager.grey,
   );
+  static TextStyle font14Grey = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorManager.darkGrey,
+  );
   static TextStyle font16White = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.bold,
