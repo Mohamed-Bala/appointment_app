@@ -1,8 +1,10 @@
 import 'package:appointment_app/features/login/data/repository/repository.dart';
+import 'package:appointment_app/features/register/data/repository/repository.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/login/logic/cubit/login_cubit.dart';
+import '../../features/register/logic/cubit/register_cubit.dart';
 import '../network/app_api.dart';
 import '../network/dio_factory.dart';
 
@@ -18,6 +20,6 @@ Future<void> init() async {
   di.registerFactory<LoginCubit>(() => LoginCubit(di()));
 
    // signup
-  // di.registerLazySingleton<SignupRepo>(() => SignupRepo(di()));
-  // di.registerFactory<SignupCubit>(() => SignupCubit(di()));
+  di.registerLazySingleton<RegisterRepository>(() => RegisterRepository(di()));
+  di.registerFactory<RegisterCubit>(() => RegisterCubit(di()));
 }
