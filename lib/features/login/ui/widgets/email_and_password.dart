@@ -1,6 +1,6 @@
 
 
-import 'package:appointment_app/features/login/ui/widgets/password_validations.dart';
+import 'package:appointment_app/features/register/ui/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
