@@ -1,10 +1,10 @@
 import 'package:appointment_app/core/helper/extensions.dart';
 import 'package:appointment_app/core/resources/color_manager.dart';
-import 'package:appointment_app/core/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/routing/routes.dart';
+import '../../../../core/widgets/snackbar_message.dart';
 import '../../logic/cubit/login_cubit.dart';
 import '../../logic/cubit/login_state.dart';
 
@@ -33,40 +33,13 @@ class LoginBlocListener extends StatelessWidget {
             context.pushNamed(Routes.homeRoute);
           },
           error: (error) {
-            setupErrorState(context, error);
+            context.pop();
+            SnackBarMessage()
+                .showErrorSnackBar(message: error, context: context);
           },
         );
       },
       child: const SizedBox.shrink(),
-    );
-  }
-
-  void setupErrorState(BuildContext context, String error) {
-    context.pop();
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        icon: const Icon(
-          Icons.error,
-          color: Colors.red,
-          size: 32,
-        ),
-        content: Text(
-          error,
-          style: StylesManager.font24Black700Weight,
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              context.pop();
-            },
-            child: Text(
-              'Got it',
-              style: StylesManager.font14Grey,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }
