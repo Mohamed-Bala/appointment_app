@@ -9,7 +9,6 @@ import '../../logic/cubit/login_cubit.dart';
 import '../widgets/dont_have_account_text.dart';
 import '../widgets/email_and_password.dart';
 import '../widgets/login_bloc_listener.dart';
-import '../widgets/terms_and_conditions_text.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -36,7 +35,7 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(40),
+                verticalSpace(70),
                 Text(
                   'Welcome Back',
                   style: StylesManager.font30PrimaryBold,
@@ -69,9 +68,7 @@ class _LoginViewState extends State<LoginView> {
                         validateThenDoLogin(context);
                       },
                     ),
-                    verticalSpace(18),
-                    const TermsAndConditionsText(),
-                    verticalSpace(50),
+                    verticalSpace(24),
                     const DontHaveAccountText(),
                     const LoginBlocListener(),
                   ],
