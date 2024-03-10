@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/resources/styles_manager.dart';
 import '../../../../core/widgets/app_text_button.dart';
-import '../../../login/ui/widgets/terms_and_conditions_text.dart';
 import '../widgets/already_have_account_text.dart';
 import '../widgets/register_bloc_listener.dart';
 
@@ -60,7 +59,7 @@ class _RegisterViewState extends State<RegisterView> {
                       },
                     ),
                     verticalSpace(18),
-                    const TermsAndConditionsText(),
+                    //  const TermsAndConditionsText(),
                     verticalSpace(40),
                     const AlreadyHaveAccountText(),
                     const RegisterpBlocListener(),
