@@ -9,6 +9,7 @@ import '../../../../core/resources/styles_manager.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../widgets/already_have_account_text.dart';
 import '../widgets/register_bloc_listener.dart';
+import '../widgets/terms_and_conditions_text.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
