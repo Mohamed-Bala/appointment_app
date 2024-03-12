@@ -60,7 +60,7 @@ class _RegisterViewState extends State<RegisterView> {
                       },
                     ),
                     verticalSpace(18),
-                    //  const TermsAndConditionsText(),
+                    const TermsAndConditionsText(),
                     verticalSpace(40),
                     const AlreadyHaveAccountText(),
                     const RegisterpBlocListener(),
