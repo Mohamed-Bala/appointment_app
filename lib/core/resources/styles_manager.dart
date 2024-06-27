@@ -29,4 +29,14 @@ class StylesManager {
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
+  static TextStyle font18DarkPrimaryBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.bold,
+    color: ColorManager.black,
+  );
+  static TextStyle font12GrayRegular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.bold,
+    color: ColorManager.grey,
+  );
 }
