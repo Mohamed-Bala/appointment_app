@@ -1,3 +1,4 @@
+import 'package:appointment_app/features/home/logic/home_cubit.dart';
 import 'package:appointment_app/features/home/ui/view/home_view.dart';
 import 'package:appointment_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:appointment_app/features/login/ui/view/login_view.dart';
@@ -36,7 +37,11 @@ class AppRoute {
           ),
         );
       case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) => const HomeView());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider<HomeCubit>(
+                  create: (context) => HomeCubit(di())..getSpecialization(),
+                  child: const HomeView(),
+                ));
       case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
 

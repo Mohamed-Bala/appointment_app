@@ -3,6 +3,8 @@ import 'package:appointment_app/features/register/data/repository/repository.dar
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../features/home/data/network/home_api.dart';
+import '../../features/home/data/repository/home_repository.dart';
 import '../../features/login/logic/cubit/login_cubit.dart';
 import '../../features/register/logic/cubit/register_cubit.dart';
 import '../network/app_api.dart';
@@ -19,7 +21,12 @@ Future<void> init() async {
   di.registerLazySingleton<LoginRepository>(() => LoginRepository(di()));
   di.registerFactory<LoginCubit>(() => LoginCubit(di()));
 
-   // signup
+  // signup
   di.registerLazySingleton<RegisterRepository>(() => RegisterRepository(di()));
   di.registerFactory<RegisterCubit>(() => RegisterCubit(di()));
+
+  // home
+
+  di.registerLazySingleton<HomeRepository>(() => HomeRepository(di()));
+  di.registerLazySingleton<HomeApi>(() => HomeApi(dio));
 }
