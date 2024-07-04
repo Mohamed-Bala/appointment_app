@@ -18,14 +18,11 @@ class DoctorsSpecialityListViewItem extends StatelessWidget {
       padding: EdgeInsetsDirectional.only(start: index == 0 ? 0 : 24.w),
       child: Column(
         children: [
-          CircleAvatar(
-            radius: 28,
-            //  backgroundColor: ColorManager.lightPrimary,
-            child: SvgPicture.asset(
-              'assets/svg/general_speciality.svg',
-              height: 40.h,
-              width: 40.w,
-            ),
+          verticalSpace(8),
+          SvgPicture.asset(
+            'assets/svg/general_speciality.svg',
+            height: 40.h,
+            width: 40.w,
           ),
           verticalSpace(8),
           Text(
