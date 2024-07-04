@@ -43,7 +43,10 @@ dependencies:
   # reading and writing simple key-value pairs
   shared_preferences: ^2.2.0
   firebase_core: ^2.24.2
-  
+  # easy way to add shimmer effect
+  shimmer: ^3.0.0
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../data/response/response.dart';
+import '../../../data/response/response.dart';
 import 'doctorsList_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
